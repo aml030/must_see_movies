@@ -36,6 +36,12 @@
                 <i class="fa fa-trash-o"></i>
               </a>
             </div>
+
+            <ul class="list-group">
+            <% @actor.roles.each do |role| %>
+            <li class="list-group-item"> <%= role.character_name %> </li>
+            <% end %>
+            </ul>
           </div>
         </div>
       </div>

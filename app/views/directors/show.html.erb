@@ -22,25 +22,35 @@
               <dt>Name</dt>
               <dd><%= @director.name %></dd>
 
-            </dl>
-            <div class="btn-group btn-group-justified">
-              <a href="/directors" class="btn btn-primary">
-                <i class="fa fa-chevron-left"></i>
-              </a>
+              <dt>Movies</dt>
 
-              <a href="/directors/<%= @director.id %>/edit" class="btn btn-warning">
-                <i class="fa fa-edit"></i>
-              </a>
+              <dd>
 
-              <a href="/delete_director/<%= @director.id %>" class="btn btn-danger" rel="nofollow">
-                <i class="fa fa-trash-o"></i>
-              </a>
+
+              </dl>
+              <div class="btn-group btn-group-justified">
+                <a href="/directors" class="btn btn-primary">
+                  <i class="fa fa-chevron-left"></i>
+                </a>
+
+                <a href="/directors/<%= @director.id %>/edit" class="btn btn-warning">
+                  <i class="fa fa-edit"></i>
+                </a>
+
+                <a href="/delete_director/<%= @director.id %>" class="btn btn-danger" rel="nofollow">
+                  <i class="fa fa-trash-o"></i>
+                </a>
+              </div>
+            <ul class="list-group">
+                  <% @director.movies.each do |movie| %></dd>
+                  <li class="list-group-item"><%= movie.title %></li>
+                  <% end %>
+                </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- End responsive panel example -->
+  <!-- End responsive panel example -->
